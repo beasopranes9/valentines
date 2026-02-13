@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To My Valentine ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-pink: #fbc6d0;
+            --accent-red: #8e2d56;
+            --white: #ffffff;
+            --glass: rgba(255, 255, 255, 0.4);
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-pink);
+            font-family: 'Quicksand', sans-serif;
+            color: var(--accent-red);
+            overflow: hidden;
+            background: linear-gradient(135deg, #fbc6d0 0%, #fdb7c5 100%);
+        }
+
+        .wave-bg {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 10% 20%, #fdb7c5 0%, transparent 40%),
+                        radial-gradient(circle at 90% 80%, #fdb7c5 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .active { display: flex; }
+
+        @keyframes slideUp { 
+            from { opacity: 0; transform: translateY(30px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+
+        .grid-2x2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            max-width: 400px;
+            max-height: 55vh;
+            overflow-y: auto;
+            padding: 15px;
+        }
+
+        .polaroid {
+            background: white;
+            padding: 8px 8px 20px 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .polaroid img { 
+            width: 100%; 
+            aspect-ratio: 1 / 1; 
+            object-fit: cover;
+            display: block;
+            border-radius: 2px;
+        }
+
+        .message-box {
+            text-align: left;
+            background: var(--glass);
+            padding: 25px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            max-width: 500px;
+            max-height: 50vh;
+            overflow-y: auto;
+            border: 1px solid rgba(255,255,255,0.5);
+            line-height: 1.6;
+        }
+
+        .btn-next {
+            margin-top: 25px;
+            padding: 12px 40px;
+            background: var(--accent-red);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            z-index: 100;
+        }
+
+        .music-card {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .bar { width: 4px; height: 15px; background: var(--accent-red); animation: bounce 1s infinite alternate; }
+        @keyframes bounce { from { height: 5px; } to { height: 20px; } }
+
+        h1, h2 { font-family: 'Dancing Script', cursive; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="wave-bg"></div>
+
+    <div class="slide active" id="slide1">
+        <div style="background: white; padding: 40px; border: 15px solid white; outline: 2px dashed var(--bg-pink); outline-offset: -20px;">
+            <div style="font-size: 60px;">💌</div>
+            <h1> My valentine</h1>
+            <p>I have a special message for you...</p>
+        </div>
+        <button class="btn-next" onclick="nextSlide(2)">Open Message ➔</button>
+    </div>
+
+    <div class="slide" id="slide2">
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; align-items: center;">
+            <div class="polaroid" style="width: 180px; transform: rotate(-3deg);">
+                <img src="626780046_2145832489510303_5614509052251079764_n.jpg" alt="My Lab">
+            </div>
+           <div class="message-box">
+    <h2>My Lab ❤️</h2>
+
+    <p>I just want to take this moment to tell you how truly grateful I am for you. I may not always say it out loud, but I appreciate everything you do for me. Every bit of patience, every time you choose to understand me. Kahit magkalayo man tayo, asahan mo lab na ikaw lang.</p>
+
+    <p>Thank you kasi kahit may mga ugali ako na minsan hindi mo nagugustuhan — like pagiging emotional ko — you still choose to understand me. Hindi mo ako sinusukuan. You still choose to love me kahit hindi ako perfect, kahit minsan sakit ng ulo mo ako.</p>
+
+    <p>Hindi man tayo laging okay at hindi man perfect ang lahat, ang mahalaga para sa’kin, hindi tayo sumusuko. We always try to fix things and choose each other.</p>
+
+    <p>I’m sorry kung minsan nadadagdagan pa kita sa problema. I’m sorry din kung may mga nasasabi ako na hindi ko naman talaga intention na makasakit. Sometimes nadadala lang ako ng emotions ko, pero that doesn’t mean I love you any less.</p>
+
+    <p>Kahit may problems man na dumating sa atin, I hope we always hold on to each other. Hindi man laging madali ang lahat, pero basta ikaw ang kasama ko, kakayanin ko. I don’t ask for anything — ikaw lang talaga kailangan ko.</p>
+
+    <p>Sana matupad mo na rin ang mga pangarap mo. Kahit matagal, alam ko kakayanin mo at darating din ‘yun, lab, hangga’t gusto mo. And I want you to know na lagi akong nasa likod mo, cheering for you and supporting you in every step.</p>
+
+    <p>I will pray for you and love you quietly and loudly at the same time. Ikaw ang pipiliin ko hindi lang kapag madali, kundi lalo na kapag mahirap. Mahal kita nang buo — walang kulang, walang pag-aalinlangan. ❤️</p>
+
+    <p>You are my peace, my comfort, and my home. I love you so much, always. ❤️💞</p>
+
+</div>
+
+        </div>
+        <button class="btn-next" onclick="nextSlide(3)">Next ➔</button>
+    </div>
+
+    <div class="slide" id="slide3">
+        <h2>Thank you for being you!</h2>
+        <div class="grid-2x2">
+            <div class="polaroid"><img src="626032781_1615219846476828_328398926301802970_n.jpg"></div>
+            <div class="polaroid"><img src="627397867_840185099074149_6948419420190727411_n.jpg"></div>
+            <div class="polaroid"><img src="630770552_1448078086712436_9197802058192857848_n.jpg"></div>
+            <div class="polaroid"><img src="632079350_775258825104513_487898133742463818_n.jpg"></div>
+            <div class="polaroid"><img src="lab1.jpg"></div> 
+            <div class="polaroid"><img src="329625541_1175686856649790_18271238492822719_n.jpg"></div>
+            <div class="polaroid"><img src="633889622_1135025528609010_5099277155822675766_n.jpg"></div>
+            <div class="polaroid"><img src="634230521_3199611833671708_1342659666872251935_n.jpg"></div>
+        </div>
+        <button class="btn-next" onclick="nextSlide(4)">One last thing... ➔</button>
+    </div>
+
+    <div class="slide" id="slide4">
+        <div style="margin-bottom: 20px;">
+            <span style="font-size: 60px;">🧸❤️🌹</span>
+        </div>
+        <h1 style="font-size: 3.5rem; margin: 0;">Happy Valentine's Day</h1>
+        <p style="font-size: 1.5rem; font-family: 'Dancing Script';">I love you so much!</p>
+        <p style="opacity: 0.8;">- Lab</p>
+        
+        <div class="music-card">
+            <div style="display: flex; gap: 4px;">
+                <div class="bar"></div>
+                <div class="bar" style="animation-delay: 0.2s"></div>
+                <div class="bar" style="animation-delay: 0.4s"></div>
+            </div>
+            <div style="text-align: left; font-size: 0.85rem;">
+                <strong>Now Playing:</strong> Our Favorite Song
+            </div>
+            <button onclick="toggleMusic()" id="musicBtn" style="border: none; background: none; cursor: pointer; font-size: 1.2rem;">▶️</button>
+        </div>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="its always been you.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        let currentSlide = 1;
+        const music = document.getElementById('bgMusic');
+
+        function nextSlide(n) {
+            document.getElementById(`slide${currentSlide}`).style.display = 'none';
+            document.getElementById(`slide${n}`).style.display = 'flex';
+            currentSlide = n;
+            if(n >= 2) music.play().catch(e => console.log("Music play blocked by browser"));
+        }
+
+        function toggleMusic() {
+            const btn = document.getElementById('musicBtn');
+            if (music.paused) { music.play(); btn.innerText = "⏸️"; } 
+            else { music.pause(); btn.innerText = "▶️"; }
+        }
+
+        function createEffect(emoji) {
+            const el = document.createElement('div');
+            el.innerHTML = emoji;
+            el.style.position = 'fixed';
+            el.style.left = Math.random() * 100 + 'vw';
+            el.style.bottom = '-20px';
+            el.style.fontSize = (Math.random() * 20 + 15) + 'px';
+            el.style.zIndex = '-1';
+            document.body.appendChild(el);
+            const duration = 4000 + Math.random() * 3000;
+            el.animate([{ transform: 'translateY(0)', opacity: 1 }, { transform: 'translateY(-110vh)', opacity: 0 }], { duration: duration });
+            setTimeout(() => el.remove(), duration);
+        }
+        setInterval(() => createEffect('❤️'), 600);
+    </script>
+</body>
+</html>
